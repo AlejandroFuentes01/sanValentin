@@ -1,0 +1,70 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Color de fondo claro */
+    transition: background-color 0.3s; /* Suave transición para el modo oscuro */
+}
+
+.container {
+    text-align: center;
+}
+
+.heart-gif {
+    max-width: 100%;
+    height: auto;
+    animation: pulse 2s infinite; /* Animación que hace que el corazón "palpite" */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px; /* Hace los botones completamente redondeados */
+    transition: transform 0.2s, margin 0.2s, box-shadow 0.3s, background-color 0.3s;
+}
+
+#yesBtn {
+    background-color: #4CAF50; /* Verde más suave */
+    color: white;
+}
+
+#yesBtn:hover {
+    box-shadow: 0 0 15px #4CAF50; /* Sombra que se expande al pasar el mouse */
+}
+
+#noBtn {
+    background-color: #f44336; /* Rojo más suave */
+    color: white;
+}
+
+#noBtn:hover {
+    box-shadow: 0 0 15px #f44336; /* Sombra que se expande al pasar el mouse */
+}
+
+.toggle-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+}
+
+.toggle-mode:hover {
+    background-color: #ccc;
+}
